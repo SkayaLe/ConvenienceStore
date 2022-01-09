@@ -41,7 +41,7 @@ namespace ConvenienceStore
             this.txtUsername.Location = new System.Drawing.Point(65, 77);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(195, 20);
-            this.txtUsername.TabIndex = 4;
+            this.txtUsername.TabIndex = 0;
             // 
             // txtPasswd
             // 
@@ -81,6 +81,7 @@ namespace ConvenienceStore
             // 
             // Login
             // 
+            this.AcceptButton = this.LoginBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(317, 243);
