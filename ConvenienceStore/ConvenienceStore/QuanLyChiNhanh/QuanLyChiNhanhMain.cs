@@ -12,9 +12,24 @@ namespace ConvenienceStore.QuanLyChiNhanh
 {
     public partial class QuanLyChiNhanhMain : Form
     {
-        public QuanLyChiNhanhMain()
+        private string user;
+
+        public QuanLyChiNhanhMain(string user)
         {
             InitializeComponent();
+            this.user = user;
+        }
+
+        private void QuanLyChiNhanhMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+            //new Login().Show();
+            Application.Exit();
+        }
+
+        private void QuanLyChiNhanhMain_Load(object sender, EventArgs e)
+        {
+            userLbl.Text = user;
         }
     }
 }

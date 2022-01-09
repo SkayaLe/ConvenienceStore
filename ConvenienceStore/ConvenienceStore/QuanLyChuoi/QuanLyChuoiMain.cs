@@ -12,9 +12,24 @@ namespace ConvenienceStore.QuanLyChuoi
 {
     public partial class QuanLyChuoiMain : Form
     {
-        public QuanLyChuoiMain()
+        private string user;
+
+        public QuanLyChuoiMain(string user)
         {
             InitializeComponent();
+            this.user = user;
+        }
+
+        private void QuanLyChuoiMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+            //new Login().Show();
+            Application.Exit();
+        }
+
+        private void QuanLyChuoiMain_Load(object sender, EventArgs e)
+        {
+            userLbl.Text = user;
         }
     }
 }
