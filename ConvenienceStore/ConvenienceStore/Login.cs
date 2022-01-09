@@ -36,38 +36,38 @@ namespace ConvenienceStore
             return ql.isQLChuoi.Value;
         }
 
-        private void LoginBtn_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             if (CheckTaiKhoan(txtUsername.Text, txtPasswd.Text))
+            {
                 switch (txtUsername.Text.Substring(0, 2))
                 {
                     case "QL":
                         if (CheckQuanLyChuoi(txtUsername.Text))
                         {
-                            QuanLyChuoi.QuanLyChuoiMain mainMenuQLChuoi = new QuanLyChuoi.QuanLyChuoiMain();
-                            this.Hide();
-                            mainMenuQLChuoi.Show();
+                            new QuanLyChuoi.QuanLyChuoiMain(txtUsername.Text).Show();
                         }
                         else
                         {
-                            QuanLyChiNhanh.QuanLyChiNhanhMain mainMenuQLChiNhanh = new QuanLyChiNhanh.QuanLyChiNhanhMain();
-                            this.Hide();
-                            mainMenuQLChiNhanh.Show();
+                            new QuanLyChiNhanh.QuanLyChiNhanhMain(txtUsername.Text).Show();
                         }
                         break;
                     case "BH":
-                        NhanVienBanHang.NhanVienBanHangMain mainMenuBanHang = new NhanVienBanHang.NhanVienBanHangMain();
-                        this.Hide();
-                        mainMenuBanHang.Show();
+                        new NhanVienBanHang.NhanVienBanHangMain(txtUsername.Text).Show();
                         break;
                     case "TK":
-                        NhanVienThuKho.NhanVienThuKhoMain mainMenuThuKho = new NhanVienThuKho.NhanVienThuKhoMain();
-                        this.Hide();
-                        mainMenuThuKho.Show();
+                        new NhanVienThuKho.NhanVienThuKhoMain(txtUsername.Text).Show();
                         break;
                 }
+                this.Dispose();
+            }    
             else
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu!");
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();        
         }
     }
 }

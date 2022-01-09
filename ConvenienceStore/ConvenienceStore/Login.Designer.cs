@@ -31,9 +31,9 @@ namespace ConvenienceStore
         {
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPasswd = new System.Windows.Forms.TextBox();
-            this.UsernameLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.LoginBtn = new System.Windows.Forms.Button();
+            this.usernameLbl = new System.Windows.Forms.Label();
+            this.passwdLbl = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -51,47 +51,48 @@ namespace ConvenienceStore
             this.txtPasswd.TabIndex = 1;
             this.txtPasswd.UseSystemPasswordChar = true;
             // 
-            // UsernameLbl
+            // usernameLbl
             // 
-            this.UsernameLbl.AutoSize = true;
-            this.UsernameLbl.Location = new System.Drawing.Point(70, 61);
-            this.UsernameLbl.Name = "UsernameLbl";
-            this.UsernameLbl.Size = new System.Drawing.Size(55, 13);
-            this.UsernameLbl.TabIndex = 2;
-            this.UsernameLbl.Text = "Username";
+            this.usernameLbl.AutoSize = true;
+            this.usernameLbl.Location = new System.Drawing.Point(70, 61);
+            this.usernameLbl.Name = "usernameLbl";
+            this.usernameLbl.Size = new System.Drawing.Size(55, 13);
+            this.usernameLbl.TabIndex = 2;
+            this.usernameLbl.Text = "Username";
             // 
-            // label1
+            // passwdLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Password";
+            this.passwdLbl.AutoSize = true;
+            this.passwdLbl.Location = new System.Drawing.Point(70, 129);
+            this.passwdLbl.Name = "passwdLbl";
+            this.passwdLbl.Size = new System.Drawing.Size(53, 13);
+            this.passwdLbl.TabIndex = 2;
+            this.passwdLbl.Text = "Password";
             // 
-            // LoginBtn
+            // btnLogin
             // 
-            this.LoginBtn.Location = new System.Drawing.Point(122, 191);
-            this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(75, 24);
-            this.LoginBtn.TabIndex = 3;
-            this.LoginBtn.Text = "Đăng nhập";
-            this.LoginBtn.UseVisualStyleBackColor = true;
-            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
+            this.btnLogin.Location = new System.Drawing.Point(122, 191);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 24);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // Login
             // 
-            this.AcceptButton = this.LoginBtn;
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(317, 243);
-            this.Controls.Add(this.LoginBtn);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.UsernameLbl);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.passwdLbl);
+            this.Controls.Add(this.usernameLbl);
             this.Controls.Add(this.txtPasswd);
             this.Controls.Add(this.txtUsername);
             this.Name = "Login";
             this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,9 +102,9 @@ namespace ConvenienceStore
 
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPasswd;
-        private System.Windows.Forms.Label UsernameLbl;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button LoginBtn;
+        private System.Windows.Forms.Label usernameLbl;
+        private System.Windows.Forms.Label passwdLbl;
+        private System.Windows.Forms.Button btnLogin;
     }
 }
 
