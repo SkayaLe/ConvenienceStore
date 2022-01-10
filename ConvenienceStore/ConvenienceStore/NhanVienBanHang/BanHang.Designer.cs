@@ -243,7 +243,7 @@ namespace ConvenienceStore.NhanVienBanHang
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(673, 404);
+            this.btnHuy.Location = new System.Drawing.Point(668, 389);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(100, 23);
             this.btnHuy.TabIndex = 9;

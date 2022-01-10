@@ -13,6 +13,7 @@ namespace Services
 
         }
 
+        // Lấy user có username và password, nếu tồn tại thì trả về true, ngược lại là false
         public bool CheckTaiKhoan(string username, string passwd)
         {
             try
@@ -26,6 +27,7 @@ namespace Services
             return true;
         }
 
+        // Lấy bit isQLChuoi từ quản lý dựa trên maQL tương ứng
         public bool CheckQuanLyChuoi(string username)
         {
             return ModelEntity.db.QuanLy.Single(x => x.maQL == username).isQLChuoi.Value;

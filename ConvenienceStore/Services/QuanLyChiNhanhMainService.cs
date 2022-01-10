@@ -13,14 +13,10 @@ namespace Services
 
         }
 
+        // Lấy tên nhân viên bán hàng từ bảng người
         public string getName(string maQLChiNhanh)
         {
             return ModelEntity.db.Nguoi.Single(x => x.userID == maQLChiNhanh).hoTen;
-        }
-
-        public List<Model.QuanLy> getAllNVBH()
-        {
-            return ModelEntity.db.QuanLy.ToList();
         }
     }
 }

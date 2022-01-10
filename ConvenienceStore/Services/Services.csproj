@@ -118,6 +118,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyChiNhanhMainService.cs" />
     <Compile Include="QuanLyChuoiMainService.cs" />
+    <Compile Include="QuanLySanPhamService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

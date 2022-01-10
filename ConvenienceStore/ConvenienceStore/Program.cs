@@ -16,6 +16,7 @@ namespace ConvenienceStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // Show new login form before running
             new Login().Show();
             Application.Run();
         }

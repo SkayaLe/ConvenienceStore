@@ -13,14 +13,10 @@ namespace Services
 
         }
 
+        // Lấy tên nhân viên thủ kho từ table Nguoi
         public string getName(string maNVTK)
         {
             return ModelEntity.db.Nguoi.Single(x => x.userID == maNVTK).hoTen;
-        }
-
-        public List<Model.NhanVienThuKho> getAllNVBH()
-        {
-            return ModelEntity.db.NhanVienThuKho.ToList();
         }
     }
 }

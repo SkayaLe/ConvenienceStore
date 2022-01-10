@@ -63,7 +63,7 @@ namespace ConvenienceStore.NhanVienBanHang
             this.pnlSideBar.Controls.Add(this.btnBanHang);
             this.pnlSideBar.Location = new System.Drawing.Point(1, 36);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(117, 437);
+            this.pnlSideBar.Size = new System.Drawing.Size(117, 441);
             this.pnlSideBar.TabIndex = 1;
             // 
             // btnTongKetCa
@@ -90,6 +90,7 @@ namespace ConvenienceStore.NhanVienBanHang
             // 
             this.pnlTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlTitle.Controls.Add(this.pnlUseCase);
             this.pnlTitle.Controls.Add(this.lblTime);
             this.pnlTitle.Controls.Add(this.btnLogout);
             this.pnlTitle.Location = new System.Drawing.Point(118, 0);
@@ -134,7 +135,7 @@ namespace ConvenienceStore.NhanVienBanHang
             // 
             // pnlUseCase
             // 
-            this.pnlUseCase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlUseCase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlUseCase.Location = new System.Drawing.Point(118, 36);
             this.pnlUseCase.Name = "pnlUseCase";
@@ -142,7 +143,7 @@ namespace ConvenienceStore.NhanVienBanHang
             this.pnlUseCase.TabIndex = 3;
             // 
             // NhanVienBanHangMain
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 473);
@@ -150,7 +151,6 @@ namespace ConvenienceStore.NhanVienBanHang
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlSideBar);
-            this.IsMdiContainer = true;
             this.Name = "NhanVienBanHangMain";
             this.Text = "NhanVienBanHangMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NhanVienBanHangMain_FormClosed);

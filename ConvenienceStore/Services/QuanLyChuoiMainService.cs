@@ -13,14 +13,10 @@ namespace Services
 
         }
 
+        // Lấy tên quản lý từ table Nguoi
         public string getName(string maQLChuoi)
         {
             return ModelEntity.db.Nguoi.Single(x => x.userID == maQLChuoi).hoTen;
-        }
-
-        public List<Model.QuanLy> getAllNVBH()
-        {
-            return ModelEntity.db.QuanLy.ToList();
         }
     }
 }

@@ -54,29 +54,50 @@ namespace ConvenienceStore.QuanLyChuoi
             // 
             // pnlSideBar
             // 
-            this.pnlSideBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.pnlSideBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSideBar.Controls.Add(this.btnQuanLySanPham);
             this.pnlSideBar.Location = new System.Drawing.Point(1, 36);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(117, 437);
+            this.pnlSideBar.Size = new System.Drawing.Size(117, 441);
             this.pnlSideBar.TabIndex = 1;
             // 
             // pnlTitle
             // 
-            this.pnlTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlTitle.Controls.Add(this.lblTime);
             this.pnlTitle.Controls.Add(this.btnLogout);
+            this.pnlTitle.Controls.Add(this.pnlUseCase);
             this.pnlTitle.Location = new System.Drawing.Point(118, 0);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(799, 38);
             this.pnlTitle.TabIndex = 2;
             // 
+            // pnlUseCase
+            // 
+            this.pnlUseCase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlUseCase.Location = new System.Drawing.Point(118, 36);
+            this.pnlUseCase.Name = "pnlUseCase";
+            this.pnlUseCase.Size = new System.Drawing.Size(798, 436);
+            this.pnlUseCase.TabIndex = 3;
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTime.Location = new System.Drawing.Point(251, 9);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(342, 23);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "Time";
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Location = new System.Drawing.Point(739, 9);
+            this.btnLogout.Location = new System.Drawing.Point(737, 8);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(50, 21);
             this.btnLogout.TabIndex = 0;
@@ -97,28 +118,9 @@ namespace ConvenienceStore.QuanLyChuoi
             // 
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // lblTime
-            // 
-            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTime.Location = new System.Drawing.Point(251, 9);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(304, 23);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "Time";
-            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlUseCase
-            // 
-            this.pnlUseCase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlUseCase.Location = new System.Drawing.Point(118, 36);
-            this.pnlUseCase.Name = "pnlUseCase";
-            this.pnlUseCase.Size = new System.Drawing.Size(798, 436);
-            this.pnlUseCase.TabIndex = 3;
-            // 
             // QuanLyChuoiMain
             // 
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 473);
