@@ -17,7 +17,6 @@ namespace Services.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CaLam()
         {
-            this.HoaDon = new HashSet<HoaDon>();
             this.NhanVienBanHangCaLam = new HashSet<NhanVienBanHangCaLam>();
         }
     
@@ -25,8 +24,6 @@ namespace Services.Model
         public Nullable<System.TimeSpan> thoiGianBD { get; set; }
         public Nullable<System.TimeSpan> thoiGianKT { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDon> HoaDon { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhanVienBanHangCaLam> NhanVienBanHangCaLam { get; set; }
     }

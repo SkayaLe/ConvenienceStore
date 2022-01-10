@@ -138,13 +138,11 @@ create table HoaDon
 (
 	maHD char(8),
 	maNVBH char(8),
-	maCa char(8),
 	maCN char(8),
 	ngayLap datetime,
 	tongTien float,
 	primary key (maHD),
 	foreign key (maNVBH) references NhanVienBanHang(maNVBH),
-	foreign key (maCa) references CaLam(maCa),
 	foreign key (maCN) references ChiNhanh(maCN)
 )
 
@@ -458,11 +456,11 @@ insert into MatHangChiNhanh values
 --TABLE 13
 SET DATEFORMAT DMY
 insert into HoaDon values
-	('HD00001','BH000001','CA000001','CN000001','13/11/2021',55000),
-	('HD00002','BH000002','CA000002','CN000002','14/11/2021',135000),
-	('HD00003','BH000003','CA000001','CN000002','15/11/2021',72000),
-	('HD00004','BH000004','CA000003','CN000001','16/11/2021',98000),
-	('HD00005','BH000005','CA000002','CN000001','17/11/2021',112000)
+	('HD00001','BH000001','CN000001','13/11/2021 08:00:00',55000),
+	('HD00002','BH000002','CN000002','14/11/2021 16:00:00',135000),
+	('HD00003','BH000003','CN000002','15/11/2021 07:30:00',72000),
+	('HD00004','BH000004','CN000001','16/11/2021 02:15:00',98000),
+	('HD00005','BH000005','CN000001','17/11/2021 17:30:00',112000)
 
 --TABLE 14
 insert into HoaDonSanPham values

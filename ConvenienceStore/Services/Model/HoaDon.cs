@@ -22,12 +22,10 @@ namespace Services.Model
     
         public string maHD { get; set; }
         public string maNVBH { get; set; }
-        public string maCa { get; set; }
         public string maCN { get; set; }
         public Nullable<System.DateTime> ngayLap { get; set; }
         public Nullable<double> tongTien { get; set; }
     
-        public virtual CaLam CaLam { get; set; }
         public virtual ChiNhanh ChiNhanh { get; set; }
         public virtual NhanVienBanHang NhanVienBanHang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

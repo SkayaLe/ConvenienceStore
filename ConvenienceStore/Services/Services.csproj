@@ -120,32 +120,31 @@
     <Compile Include="QuanLyChuoiMainService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="Model\ConvenienceStoreModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ConvenienceStoreModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="Model\ConvenienceStoreModel.edmx.diagram">
       <DependentUpon>ConvenienceStoreModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
     <Content Include="Model\ConvenienceStoreModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ConvenienceStoreModel.Context.cs</LastGenOutput>
       <DependentUpon>ConvenienceStoreModel.edmx</DependentUpon>
+      <LastGenOutput>ConvenienceStoreModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model\ConvenienceStoreModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ConvenienceStoreModel.edmx</DependentUpon>
       <LastGenOutput>ConvenienceStoreModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
