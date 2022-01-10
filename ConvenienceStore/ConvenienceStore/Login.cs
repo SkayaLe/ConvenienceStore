@@ -32,8 +32,7 @@ namespace ConvenienceStore
 
         public bool CheckQuanLyChuoi(string username)
         {
-            var ql = Model.ModelEntity.db.QuanLies.Single(x => x.maQL == username);
-            return ql.isQLChuoi.Value;
+            return Model.ModelEntity.db.QuanLies.Single(x => x.maQL == username).isQLChuoi.Value;
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)

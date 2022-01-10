@@ -16,7 +16,8 @@ namespace ConvenienceStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            new Login().Show();
+            Application.Run();
         }
     }
 }
