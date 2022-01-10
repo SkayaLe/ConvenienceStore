@@ -12,24 +12,70 @@ namespace ConvenienceStore.QuanLyChiNhanh
 {
     public partial class QuanLyChiNhanhMain : Form
     {
-        private string user;
+        private string maQLChiNhanh;
+        private Model.QuanLy qlChiNhanh;
 
-        public QuanLyChiNhanhMain(string user)
+        private Form currentChildForm;
+
+        public QuanLyChiNhanhMain(string maQLChiNhanh)
         {
             InitializeComponent();
-            this.user = user;
+            this.maQLChiNhanh = maQLChiNhanh;
+            timer.Start();
         }
 
-        private void QuanLyChiNhanhMain_FormClosed(object sender, FormClosedEventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
-            this.Dispose();
-            //new Login().Show();
-            Application.Exit();
+            DateTime dt = DateTime.Now;
+            timeLbl.Text = dt.ToString("dddd dd/MM/yyyy HH:mm:ss");
         }
 
         private void QuanLyChiNhanhMain_Load(object sender, EventArgs e)
         {
-            userLbl.Text = user;
+            qlChiNhanh = Model.ModelEntity.db.QuanLies.Single(x => x.maQL == maQLChiNhanh);
+            userLbl.Text = qlChiNhanh.Nguoi.hoTen;
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Dispose();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlUseCase.Controls.Add(childForm);
+            //pnlUseCase.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            new Login().Show();
+        }
+
+        private void QuanLyChiNhanhMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            BtnLogout_Click(sender, e);
+        }
+
+        private void BtnQuanLyNhanVien_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new QuanLyNhanVien());
+        }
+
+        private void BtnXepCaLam_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new XepCaLam());
+        }
+
+        private void BtnKiemTraHoaDon_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new KiemTraHoaDon());
         }
     }
 }

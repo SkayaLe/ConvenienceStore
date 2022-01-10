@@ -29,80 +29,122 @@ namespace ConvenienceStore.QuanLyChuoi
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnQLSanPham = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.userLbl = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.btnQuanLySanPham = new System.Windows.Forms.Button();
+            this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.userLbl = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.timeLbl = new System.Windows.Forms.Label();
+            this.pnlUseCase = new System.Windows.Forms.Panel();
+            this.pnlSideBar.SuspendLayout();
+            this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnQLSanPham
+            // btnQuanLySanPham
             // 
-            this.btnQLSanPham.Location = new System.Drawing.Point(0, 70);
-            this.btnQLSanPham.Name = "btnQLSanPham";
-            this.btnQLSanPham.Size = new System.Drawing.Size(117, 29);
-            this.btnQLSanPham.TabIndex = 0;
-            this.btnQLSanPham.Text = "Quản lý sản phẩm";
-            this.btnQLSanPham.UseVisualStyleBackColor = true;
+            this.btnQuanLySanPham.Location = new System.Drawing.Point(0, 0);
+            this.btnQuanLySanPham.Name = "btnQuanLySanPham";
+            this.btnQuanLySanPham.Size = new System.Drawing.Size(117, 29);
+            this.btnQuanLySanPham.TabIndex = 0;
+            this.btnQuanLySanPham.Text = "Quản Lý Sản Phẩm";
+            this.btnQuanLySanPham.UseVisualStyleBackColor = true;
+            this.btnQuanLySanPham.Click += new System.EventHandler(this.BtnQuanLySanPham_Click);
             // 
-            // panel1
+            // pnlSideBar
             // 
-            this.panel1.Controls.Add(this.btnQLSanPham);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(117, 450);
-            this.panel1.TabIndex = 1;
+            this.pnlSideBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlSideBar.Controls.Add(this.btnQuanLySanPham);
+            this.pnlSideBar.Location = new System.Drawing.Point(1, 36);
+            this.pnlSideBar.Name = "pnlSideBar";
+            this.pnlSideBar.Size = new System.Drawing.Size(117, 437);
+            this.pnlSideBar.TabIndex = 1;
             // 
-            // panel2
+            // pnlTitle
             // 
-            this.panel2.Controls.Add(this.userLbl);
-            this.panel2.Controls.Add(this.btnLogout);
-            this.panel2.Location = new System.Drawing.Point(118, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(682, 57);
-            this.panel2.TabIndex = 2;
-            // 
-            // userLbl
-            // 
-            this.userLbl.Location = new System.Drawing.Point(620, 9);
-            this.userLbl.Name = "userLbl";
-            this.userLbl.Size = new System.Drawing.Size(50, 21);
-            this.userLbl.TabIndex = 1;
-            this.userLbl.Text = "User";
+            this.pnlTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlTitle.Controls.Add(this.timeLbl);
+            this.pnlTitle.Controls.Add(this.btnLogout);
+            this.pnlTitle.Location = new System.Drawing.Point(118, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(799, 38);
+            this.pnlTitle.TabIndex = 2;
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(620, 33);
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.Location = new System.Drawing.Point(739, 9);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(50, 21);
             this.btnLogout.TabIndex = 0;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            // 
+            // userLbl
+            // 
+            this.userLbl.Location = new System.Drawing.Point(1, 0);
+            this.userLbl.Name = "userLbl";
+            this.userLbl.Size = new System.Drawing.Size(117, 33);
+            this.userLbl.TabIndex = 1;
+            this.userLbl.Text = "User";
+            this.userLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // timeLbl
+            // 
+            this.timeLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.timeLbl.Location = new System.Drawing.Point(251, 9);
+            this.timeLbl.Name = "timeLbl";
+            this.timeLbl.Size = new System.Drawing.Size(304, 23);
+            this.timeLbl.TabIndex = 1;
+            this.timeLbl.Text = "Time";
+            this.timeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlUseCase
+            // 
+            this.pnlUseCase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlUseCase.Location = new System.Drawing.Point(118, 36);
+            this.pnlUseCase.Name = "pnlUseCase";
+            this.pnlUseCase.Size = new System.Drawing.Size(798, 436);
+            this.pnlUseCase.TabIndex = 3;
             // 
             // QuanLyChuoiMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(917, 473);
+            this.Controls.Add(this.pnlUseCase);
+            this.Controls.Add(this.userLbl);
+            this.Controls.Add(this.pnlTitle);
+            this.Controls.Add(this.pnlSideBar);
             this.Name = "QuanLyChuoiMain";
             this.Text = "QuanLyChuoiMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuanLyChuoiMain_FormClosed);
             this.Load += new System.EventHandler(this.QuanLyChuoiMain_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnlSideBar.ResumeLayout(false);
+            this.pnlTitle.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnQLSanPham;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnQuanLySanPham;
+        private System.Windows.Forms.Panel pnlSideBar;
+        private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label userLbl;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label timeLbl;
+        private System.Windows.Forms.Panel pnlUseCase;
     }
 }
