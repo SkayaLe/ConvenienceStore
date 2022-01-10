@@ -33,10 +33,10 @@ namespace ConvenienceStore.NhanVienThuKho
             this.btnQuanLyKho = new System.Windows.Forms.Button();
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.lblTime = new System.Windows.Forms.Label();
             this.pnlUseCase = new System.Windows.Forms.Panel();
             this.pnlSideBar.SuspendLayout();
             this.pnlTitle.SuspendLayout();
@@ -54,7 +54,7 @@ namespace ConvenienceStore.NhanVienThuKho
             // 
             // pnlSideBar
             // 
-            this.pnlSideBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.pnlSideBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlSideBar.Controls.Add(this.btnQuanLyKho);
             this.pnlSideBar.Location = new System.Drawing.Point(1, 36);
@@ -64,7 +64,7 @@ namespace ConvenienceStore.NhanVienThuKho
             // 
             // pnlTitle
             // 
-            this.pnlTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlTitle.Controls.Add(this.lblTime);
             this.pnlTitle.Controls.Add(this.btnLogout);
@@ -72,6 +72,17 @@ namespace ConvenienceStore.NhanVienThuKho
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(799, 38);
             this.pnlTitle.TabIndex = 2;
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTime.Location = new System.Drawing.Point(251, 9);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(304, 23);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "Time";
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogout
             // 
@@ -97,20 +108,9 @@ namespace ConvenienceStore.NhanVienThuKho
             // 
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // lblTime
-            // 
-            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTime.Location = new System.Drawing.Point(251, 9);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(304, 23);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "Time";
-            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pnlUseCase
             // 
-            this.pnlUseCase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlUseCase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlUseCase.Location = new System.Drawing.Point(118, 36);
             this.pnlUseCase.Name = "pnlUseCase";
@@ -127,7 +127,7 @@ namespace ConvenienceStore.NhanVienThuKho
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlSideBar);
             this.Name = "NhanVienThuKhoMain";
-            this.Text = "NhanVienThuKhoMain";
+            this.Text = "Nhân Viên Thủ Kho";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NhanVienThuKhoMain_FormClosed);
             this.Load += new System.EventHandler(this.NhanVienThuKhoMain_Load);
             this.pnlSideBar.ResumeLayout(false);

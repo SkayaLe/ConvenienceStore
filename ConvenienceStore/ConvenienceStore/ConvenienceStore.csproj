@@ -159,6 +159,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyChiNhanh\QuanLyChiNhanhMain.resx">
+      <DependentUpon>QuanLyChiNhanhMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyChiNhanh\QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>

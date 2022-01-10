@@ -35,11 +35,11 @@ namespace ConvenienceStore.NhanVienBanHang
             this.btnTongKetCa = new System.Windows.Forms.Button();
             this.btnXemHoaDon = new System.Windows.Forms.Button();
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.pnlUseCase = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.pnlUseCase = new System.Windows.Forms.Panel();
             this.pnlSideBar.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
@@ -90,13 +90,21 @@ namespace ConvenienceStore.NhanVienBanHang
             // 
             this.pnlTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlTitle.Controls.Add(this.pnlUseCase);
             this.pnlTitle.Controls.Add(this.lblTime);
             this.pnlTitle.Controls.Add(this.btnLogout);
             this.pnlTitle.Location = new System.Drawing.Point(118, 0);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(799, 38);
             this.pnlTitle.TabIndex = 2;
+            // 
+            // pnlUseCase
+            // 
+            this.pnlUseCase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlUseCase.Location = new System.Drawing.Point(118, 36);
+            this.pnlUseCase.Name = "pnlUseCase";
+            this.pnlUseCase.Size = new System.Drawing.Size(798, 436);
+            this.pnlUseCase.TabIndex = 3;
             // 
             // lblTime
             // 
@@ -133,17 +141,8 @@ namespace ConvenienceStore.NhanVienBanHang
             // 
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // pnlUseCase
-            // 
-            this.pnlUseCase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlUseCase.Location = new System.Drawing.Point(118, 36);
-            this.pnlUseCase.Name = "pnlUseCase";
-            this.pnlUseCase.Size = new System.Drawing.Size(798, 436);
-            this.pnlUseCase.TabIndex = 3;
-            // 
             // NhanVienBanHangMain
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 473);
@@ -152,7 +151,7 @@ namespace ConvenienceStore.NhanVienBanHang
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlSideBar);
             this.Name = "NhanVienBanHangMain";
-            this.Text = "NhanVienBanHangMain";
+            this.Text = "Nhân Viên Bán Hàng";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NhanVienBanHangMain_FormClosed);
             this.Load += new System.EventHandler(this.NhanVienBanHangMain_Load);
             this.pnlSideBar.ResumeLayout(false);
