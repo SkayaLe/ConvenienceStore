@@ -7,23 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConvenienceStore.Model
+namespace Services.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class NhanVienThuKho
+    public partial class LoaiHang
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NhanVienThuKho()
+        public LoaiHang()
         {
-            this.NhanVienThuKhoMatHangs = new HashSet<NhanVienThuKhoMatHang>();
+            this.MatHang = new HashSet<MatHang>();
         }
     
-        public string maNVTK { get; set; }
+        public string maLoai { get; set; }
+        public string tenLoai { get; set; }
     
-        public virtual Nguoi Nguoi { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NhanVienThuKhoMatHang> NhanVienThuKhoMatHangs { get; set; }
+        public virtual ICollection<MatHang> MatHang { get; set; }
     }
 }

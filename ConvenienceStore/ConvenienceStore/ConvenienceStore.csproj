@@ -39,6 +39,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Services">
+      <HintPath>..\Services\bin\Debug\Services.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -60,67 +63,6 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\CaLam.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ChiNhanh.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ConvenienceStoreModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ConvenienceStoreModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ConvenienceStoreModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ConvenienceStoreModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ConvenienceStoreModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\HoaDon.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\HoaDonSanPham.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\KeToan.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\LoaiHang.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\MatHang.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\MatHangChiNhanh.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ModelEntity.cs" />
-    <Compile Include="Model\Nguoi.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\NhaCungCap.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\NhanVienBanHang.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\NhanVienBanHangCaLam.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\NhanVienThuKho.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\NhanVienThuKhoMatHang.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\QuanLy.cs">
-      <DependentUpon>ConvenienceStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="NhanVienBanHang\BanHang.cs">
       <SubType>Form</SubType>
@@ -217,13 +159,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Model\ConvenienceStoreModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ConvenienceStoreModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model\ConvenienceStoreModel.edmx.diagram">
-      <DependentUpon>ConvenienceStoreModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -237,18 +172,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model\ConvenienceStoreModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ConvenienceStoreModel.Context.cs</LastGenOutput>
-      <DependentUpon>ConvenienceStoreModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\ConvenienceStoreModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ConvenienceStoreModel.edmx</DependentUpon>
-      <LastGenOutput>ConvenienceStoreModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

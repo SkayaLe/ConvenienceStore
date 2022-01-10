@@ -7,18 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConvenienceStore.Model
+namespace Services.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class NhanVienBanHangCaLam
+    public partial class KeToan
     {
-        public string maNVBH { get; set; }
-        public string maCa { get; set; }
-        public System.DateTime ngayLam { get; set; }
+        public string maKT { get; set; }
     
-        public virtual CaLam CaLam { get; set; }
-        public virtual NhanVienBanHang NhanVienBanHang { get; set; }
+        public virtual Nguoi Nguoi { get; set; }
     }
 }

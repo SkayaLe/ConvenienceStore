@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConvenienceStore.Model
+namespace Services.Model
 {
     using System;
     using System.Collections.Generic;
@@ -17,8 +17,8 @@ namespace ConvenienceStore.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhanVienBanHang()
         {
-            this.HoaDons = new HashSet<HoaDon>();
-            this.NhanVienBanHangCaLams = new HashSet<NhanVienBanHangCaLam>();
+            this.HoaDon = new HashSet<HoaDon>();
+            this.NhanVienBanHangCaLam = new HashSet<NhanVienBanHangCaLam>();
         }
     
         public string maNVBH { get; set; }
@@ -29,9 +29,9 @@ namespace ConvenienceStore.Model
     
         public virtual ChiNhanh ChiNhanh { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
+        public virtual ICollection<HoaDon> HoaDon { get; set; }
         public virtual Nguoi Nguoi { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NhanVienBanHangCaLam> NhanVienBanHangCaLams { get; set; }
+        public virtual ICollection<NhanVienBanHangCaLam> NhanVienBanHangCaLam { get; set; }
     }
 }

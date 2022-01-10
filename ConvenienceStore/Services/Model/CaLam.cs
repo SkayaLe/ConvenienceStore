@@ -7,26 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConvenienceStore.Model
+namespace Services.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class NhaCungCap
+    public partial class CaLam
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NhaCungCap()
+        public CaLam()
         {
-            this.MatHangs = new HashSet<MatHang>();
+            this.HoaDon = new HashSet<HoaDon>();
+            this.NhanVienBanHangCaLam = new HashSet<NhanVienBanHangCaLam>();
         }
     
-        public string maNCC { get; set; }
-        public string tenNCC { get; set; }
-        public string sdt { get; set; }
-        public string email { get; set; }
-        public string diaChi { get; set; }
+        public string maCa { get; set; }
+        public Nullable<System.TimeSpan> thoiGianBD { get; set; }
+        public Nullable<System.TimeSpan> thoiGianKT { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MatHang> MatHangs { get; set; }
+        public virtual ICollection<HoaDon> HoaDon { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NhanVienBanHangCaLam> NhanVienBanHangCaLam { get; set; }
     }
 }

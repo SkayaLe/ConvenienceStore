@@ -477,8 +477,8 @@
           <Property Name="maCa" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="thoiGianBD" Type="Time" Precision="7" />
           <Property Name="thoiGianKT" Type="Time" Precision="7" />
-          <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__maCa__46E78A0C" FromRole="CaLam" ToRole="HoaDon" />
-          <NavigationProperty Name="NhanVienBanHangCaLams" Relationship="Self.FK__NhanVienBa__maCa__36B12243" FromRole="CaLam" ToRole="NhanVienBanHangCaLam" />
+          <NavigationProperty Name="HoaDon" Relationship="Self.FK__HoaDon__maCa__46E78A0C" FromRole="CaLam" ToRole="HoaDon" />
+          <NavigationProperty Name="NhanVienBanHangCaLam" Relationship="Self.FK__NhanVienBa__maCa__36B12243" FromRole="CaLam" ToRole="NhanVienBanHangCaLam" />
         </EntityType>
         <EntityType Name="ChiNhanh">
           <Key>
@@ -490,9 +490,9 @@
           <Property Name="sdt" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="diaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="QuanLy" Relationship="Self.FK__ChiNhanh__maQL__2B3F6F97" FromRole="ChiNhanh" ToRole="QuanLy" />
-          <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__maCN__47DBAE45" FromRole="ChiNhanh" ToRole="HoaDon" />
-          <NavigationProperty Name="MatHangChiNhanhs" Relationship="Self.FK__MatHangChi__maCN__4316F928" FromRole="ChiNhanh" ToRole="MatHangChiNhanh" />
-          <NavigationProperty Name="NhanVienBanHangs" Relationship="Self.FK__NhanVienBa__maCN__2F10007B" FromRole="ChiNhanh" ToRole="NhanVienBanHang" />
+          <NavigationProperty Name="HoaDon" Relationship="Self.FK__HoaDon__maCN__47DBAE45" FromRole="ChiNhanh" ToRole="HoaDon" />
+          <NavigationProperty Name="MatHangChiNhanh" Relationship="Self.FK__MatHangChi__maCN__4316F928" FromRole="ChiNhanh" ToRole="MatHangChiNhanh" />
+          <NavigationProperty Name="NhanVienBanHang" Relationship="Self.FK__NhanVienBa__maCN__2F10007B" FromRole="ChiNhanh" ToRole="NhanVienBanHang" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
@@ -507,7 +507,7 @@
           <NavigationProperty Name="CaLam" Relationship="Self.FK__HoaDon__maCa__46E78A0C" FromRole="HoaDon" ToRole="CaLam" />
           <NavigationProperty Name="ChiNhanh" Relationship="Self.FK__HoaDon__maCN__47DBAE45" FromRole="HoaDon" ToRole="ChiNhanh" />
           <NavigationProperty Name="NhanVienBanHang" Relationship="Self.FK__HoaDon__maNVBH__45F365D3" FromRole="HoaDon" ToRole="NhanVienBanHang" />
-          <NavigationProperty Name="HoaDonSanPhams" Relationship="Self.FK__HoaDonSanP__maHD__4AB81AF0" FromRole="HoaDon" ToRole="HoaDonSanPham" />
+          <NavigationProperty Name="HoaDonSanPham" Relationship="Self.FK__HoaDonSanP__maHD__4AB81AF0" FromRole="HoaDon" ToRole="HoaDonSanPham" />
         </EntityType>
         <EntityType Name="HoaDonSanPham">
           <Key>
@@ -533,7 +533,7 @@
           </Key>
           <Property Name="maLoai" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="tenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="MatHangs" Relationship="Self.FK__MatHang__maLoai__3E52440B" FromRole="LoaiHang" ToRole="MatHang" />
+          <NavigationProperty Name="MatHang" Relationship="Self.FK__MatHang__maLoai__3E52440B" FromRole="LoaiHang" ToRole="MatHang" />
         </EntityType>
         <EntityType Name="MatHang">
           <Key>
@@ -545,11 +545,11 @@
           <Property Name="tenMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="donViTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="donGia" Type="Double" />
-          <NavigationProperty Name="HoaDonSanPhams" Relationship="Self.FK__HoaDonSanP__maMH__4BAC3F29" FromRole="MatHang" ToRole="HoaDonSanPham" />
+          <NavigationProperty Name="HoaDonSanPham" Relationship="Self.FK__HoaDonSanP__maMH__4BAC3F29" FromRole="MatHang" ToRole="HoaDonSanPham" />
           <NavigationProperty Name="LoaiHang" Relationship="Self.FK__MatHang__maLoai__3E52440B" FromRole="MatHang" ToRole="LoaiHang" />
           <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__MatHang__maNCC__3F466844" FromRole="MatHang" ToRole="NhaCungCap" />
-          <NavigationProperty Name="MatHangChiNhanhs" Relationship="Self.FK__MatHangChi__maMH__4222D4EF" FromRole="MatHang" ToRole="MatHangChiNhanh" />
-          <NavigationProperty Name="NhanVienThuKhoMatHangs" Relationship="Self.FK__NhanVienTh__maMH__4F7CD00D" FromRole="MatHang" ToRole="NhanVienThuKhoMatHang" />
+          <NavigationProperty Name="MatHangChiNhanh" Relationship="Self.FK__MatHangChi__maMH__4222D4EF" FromRole="MatHang" ToRole="MatHangChiNhanh" />
+          <NavigationProperty Name="NhanVienThuKhoMatHang" Relationship="Self.FK__NhanVienTh__maMH__4F7CD00D" FromRole="MatHang" ToRole="NhanVienThuKhoMatHang" />
         </EntityType>
         <EntityType Name="MatHangChiNhanh">
           <Key>
@@ -589,7 +589,7 @@
           <Property Name="sdt" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="diaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="MatHangs" Relationship="Self.FK__MatHang__maNCC__3F466844" FromRole="NhaCungCap" ToRole="MatHang" />
+          <NavigationProperty Name="MatHang" Relationship="Self.FK__MatHang__maNCC__3F466844" FromRole="NhaCungCap" ToRole="MatHang" />
         </EntityType>
         <EntityType Name="NhanVienBanHang">
           <Key>
@@ -601,9 +601,9 @@
           <Property Name="soGioLam" Type="Double" />
           <Property Name="danhgia" Type="Int32" />
           <NavigationProperty Name="ChiNhanh" Relationship="Self.FK__NhanVienBa__maCN__2F10007B" FromRole="NhanVienBanHang" ToRole="ChiNhanh" />
-          <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__maNVBH__45F365D3" FromRole="NhanVienBanHang" ToRole="HoaDon" />
+          <NavigationProperty Name="HoaDon" Relationship="Self.FK__HoaDon__maNVBH__45F365D3" FromRole="NhanVienBanHang" ToRole="HoaDon" />
           <NavigationProperty Name="Nguoi" Relationship="Self.FK__NhanVienB__maNVB__2E1BDC42" FromRole="NhanVienBanHang" ToRole="Nguoi" />
-          <NavigationProperty Name="NhanVienBanHangCaLams" Relationship="Self.FK__NhanVienB__maNVB__37A5467C" FromRole="NhanVienBanHang" ToRole="NhanVienBanHangCaLam" />
+          <NavigationProperty Name="NhanVienBanHangCaLam" Relationship="Self.FK__NhanVienB__maNVB__37A5467C" FromRole="NhanVienBanHang" ToRole="NhanVienBanHangCaLam" />
         </EntityType>
         <EntityType Name="NhanVienBanHangCaLam">
           <Key>
@@ -623,7 +623,7 @@
           </Key>
           <Property Name="maNVTK" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Nguoi" Relationship="Self.FK__NhanVienT__maNVT__31EC6D26" FromRole="NhanVienThuKho" ToRole="Nguoi" />
-          <NavigationProperty Name="NhanVienThuKhoMatHangs" Relationship="Self.FK__NhanVienT__maNVT__4E88ABD4" FromRole="NhanVienThuKho" ToRole="NhanVienThuKhoMatHang" />
+          <NavigationProperty Name="NhanVienThuKhoMatHang" Relationship="Self.FK__NhanVienT__maNVT__4E88ABD4" FromRole="NhanVienThuKho" ToRole="NhanVienThuKhoMatHang" />
         </EntityType>
         <EntityType Name="NhanVienThuKhoMatHang">
           <Key>
@@ -644,7 +644,7 @@
           <Property Name="maQL" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="isQLChiNhanh" Type="Boolean" />
           <Property Name="isQLChuoi" Type="Boolean" />
-          <NavigationProperty Name="ChiNhanhs" Relationship="Self.FK__ChiNhanh__maQL__2B3F6F97" FromRole="QuanLy" ToRole="ChiNhanh" />
+          <NavigationProperty Name="ChiNhanh" Relationship="Self.FK__ChiNhanh__maQL__2B3F6F97" FromRole="QuanLy" ToRole="ChiNhanh" />
           <NavigationProperty Name="Nguoi" Relationship="Self.FK__QuanLy__maQL__25869641" FromRole="QuanLy" ToRole="Nguoi" />
         </EntityType>
         <Association Name="FK__HoaDon__maCa__46E78A0C">
@@ -876,96 +876,96 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="ConvenienceStoreEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="CaLams" EntityType="Self.CaLam" />
-          <EntitySet Name="ChiNhanhs" EntityType="Self.ChiNhanh" />
-          <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
-          <EntitySet Name="HoaDonSanPhams" EntityType="Self.HoaDonSanPham" />
-          <EntitySet Name="KeToans" EntityType="Self.KeToan" />
-          <EntitySet Name="LoaiHangs" EntityType="Self.LoaiHang" />
-          <EntitySet Name="MatHangs" EntityType="Self.MatHang" />
-          <EntitySet Name="MatHangChiNhanhs" EntityType="Self.MatHangChiNhanh" />
-          <EntitySet Name="Nguois" EntityType="Self.Nguoi" />
-          <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
-          <EntitySet Name="NhanVienBanHangs" EntityType="Self.NhanVienBanHang" />
-          <EntitySet Name="NhanVienBanHangCaLams" EntityType="Self.NhanVienBanHangCaLam" />
-          <EntitySet Name="NhanVienThuKhoes" EntityType="Self.NhanVienThuKho" />
-          <EntitySet Name="NhanVienThuKhoMatHangs" EntityType="Self.NhanVienThuKhoMatHang" />
-          <EntitySet Name="QuanLies" EntityType="Self.QuanLy" />
+          <EntitySet Name="CaLam" EntityType="Self.CaLam" />
+          <EntitySet Name="ChiNhanh" EntityType="Self.ChiNhanh" />
+          <EntitySet Name="HoaDon" EntityType="Self.HoaDon" />
+          <EntitySet Name="HoaDonSanPham" EntityType="Self.HoaDonSanPham" />
+          <EntitySet Name="KeToan" EntityType="Self.KeToan" />
+          <EntitySet Name="LoaiHang" EntityType="Self.LoaiHang" />
+          <EntitySet Name="MatHang" EntityType="Self.MatHang" />
+          <EntitySet Name="MatHangChiNhanh" EntityType="Self.MatHangChiNhanh" />
+          <EntitySet Name="Nguoi" EntityType="Self.Nguoi" />
+          <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" />
+          <EntitySet Name="NhanVienBanHang" EntityType="Self.NhanVienBanHang" />
+          <EntitySet Name="NhanVienBanHangCaLam" EntityType="Self.NhanVienBanHangCaLam" />
+          <EntitySet Name="NhanVienThuKho" EntityType="Self.NhanVienThuKho" />
+          <EntitySet Name="NhanVienThuKhoMatHang" EntityType="Self.NhanVienThuKhoMatHang" />
+          <EntitySet Name="QuanLy" EntityType="Self.QuanLy" />
           <AssociationSet Name="FK__HoaDon__maCa__46E78A0C" Association="Self.FK__HoaDon__maCa__46E78A0C">
-            <End Role="CaLam" EntitySet="CaLams" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
+            <End Role="CaLam" EntitySet="CaLam" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
           <AssociationSet Name="FK__NhanVienBa__maCa__36B12243" Association="Self.FK__NhanVienBa__maCa__36B12243">
-            <End Role="CaLam" EntitySet="CaLams" />
-            <End Role="NhanVienBanHangCaLam" EntitySet="NhanVienBanHangCaLams" />
+            <End Role="CaLam" EntitySet="CaLam" />
+            <End Role="NhanVienBanHangCaLam" EntitySet="NhanVienBanHangCaLam" />
           </AssociationSet>
           <AssociationSet Name="FK__ChiNhanh__maQL__2B3F6F97" Association="Self.FK__ChiNhanh__maQL__2B3F6F97">
-            <End Role="QuanLy" EntitySet="QuanLies" />
-            <End Role="ChiNhanh" EntitySet="ChiNhanhs" />
+            <End Role="QuanLy" EntitySet="QuanLy" />
+            <End Role="ChiNhanh" EntitySet="ChiNhanh" />
           </AssociationSet>
           <AssociationSet Name="FK__HoaDon__maCN__47DBAE45" Association="Self.FK__HoaDon__maCN__47DBAE45">
-            <End Role="ChiNhanh" EntitySet="ChiNhanhs" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
+            <End Role="ChiNhanh" EntitySet="ChiNhanh" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
           <AssociationSet Name="FK__MatHangChi__maCN__4316F928" Association="Self.FK__MatHangChi__maCN__4316F928">
-            <End Role="ChiNhanh" EntitySet="ChiNhanhs" />
-            <End Role="MatHangChiNhanh" EntitySet="MatHangChiNhanhs" />
+            <End Role="ChiNhanh" EntitySet="ChiNhanh" />
+            <End Role="MatHangChiNhanh" EntitySet="MatHangChiNhanh" />
           </AssociationSet>
           <AssociationSet Name="FK__NhanVienBa__maCN__2F10007B" Association="Self.FK__NhanVienBa__maCN__2F10007B">
-            <End Role="ChiNhanh" EntitySet="ChiNhanhs" />
-            <End Role="NhanVienBanHang" EntitySet="NhanVienBanHangs" />
+            <End Role="ChiNhanh" EntitySet="ChiNhanh" />
+            <End Role="NhanVienBanHang" EntitySet="NhanVienBanHang" />
           </AssociationSet>
           <AssociationSet Name="FK__HoaDon__maNVBH__45F365D3" Association="Self.FK__HoaDon__maNVBH__45F365D3">
-            <End Role="NhanVienBanHang" EntitySet="NhanVienBanHangs" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
+            <End Role="NhanVienBanHang" EntitySet="NhanVienBanHang" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
           <AssociationSet Name="FK__HoaDonSanP__maHD__4AB81AF0" Association="Self.FK__HoaDonSanP__maHD__4AB81AF0">
-            <End Role="HoaDon" EntitySet="HoaDons" />
-            <End Role="HoaDonSanPham" EntitySet="HoaDonSanPhams" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+            <End Role="HoaDonSanPham" EntitySet="HoaDonSanPham" />
           </AssociationSet>
           <AssociationSet Name="FK__HoaDonSanP__maMH__4BAC3F29" Association="Self.FK__HoaDonSanP__maMH__4BAC3F29">
-            <End Role="MatHang" EntitySet="MatHangs" />
-            <End Role="HoaDonSanPham" EntitySet="HoaDonSanPhams" />
+            <End Role="MatHang" EntitySet="MatHang" />
+            <End Role="HoaDonSanPham" EntitySet="HoaDonSanPham" />
           </AssociationSet>
           <AssociationSet Name="FK__KeToan__maKT__286302EC" Association="Self.FK__KeToan__maKT__286302EC">
-            <End Role="Nguoi" EntitySet="Nguois" />
-            <End Role="KeToan" EntitySet="KeToans" />
+            <End Role="Nguoi" EntitySet="Nguoi" />
+            <End Role="KeToan" EntitySet="KeToan" />
           </AssociationSet>
           <AssociationSet Name="FK__MatHang__maLoai__3E52440B" Association="Self.FK__MatHang__maLoai__3E52440B">
-            <End Role="LoaiHang" EntitySet="LoaiHangs" />
-            <End Role="MatHang" EntitySet="MatHangs" />
+            <End Role="LoaiHang" EntitySet="LoaiHang" />
+            <End Role="MatHang" EntitySet="MatHang" />
           </AssociationSet>
           <AssociationSet Name="FK__MatHang__maNCC__3F466844" Association="Self.FK__MatHang__maNCC__3F466844">
-            <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
-            <End Role="MatHang" EntitySet="MatHangs" />
+            <End Role="NhaCungCap" EntitySet="NhaCungCap" />
+            <End Role="MatHang" EntitySet="MatHang" />
           </AssociationSet>
           <AssociationSet Name="FK__MatHangChi__maMH__4222D4EF" Association="Self.FK__MatHangChi__maMH__4222D4EF">
-            <End Role="MatHang" EntitySet="MatHangs" />
-            <End Role="MatHangChiNhanh" EntitySet="MatHangChiNhanhs" />
+            <End Role="MatHang" EntitySet="MatHang" />
+            <End Role="MatHangChiNhanh" EntitySet="MatHangChiNhanh" />
           </AssociationSet>
           <AssociationSet Name="FK__NhanVienTh__maMH__4F7CD00D" Association="Self.FK__NhanVienTh__maMH__4F7CD00D">
-            <End Role="MatHang" EntitySet="MatHangs" />
-            <End Role="NhanVienThuKhoMatHang" EntitySet="NhanVienThuKhoMatHangs" />
+            <End Role="MatHang" EntitySet="MatHang" />
+            <End Role="NhanVienThuKhoMatHang" EntitySet="NhanVienThuKhoMatHang" />
           </AssociationSet>
           <AssociationSet Name="FK__NhanVienB__maNVB__2E1BDC42" Association="Self.FK__NhanVienB__maNVB__2E1BDC42">
-            <End Role="Nguoi" EntitySet="Nguois" />
-            <End Role="NhanVienBanHang" EntitySet="NhanVienBanHangs" />
+            <End Role="Nguoi" EntitySet="Nguoi" />
+            <End Role="NhanVienBanHang" EntitySet="NhanVienBanHang" />
           </AssociationSet>
           <AssociationSet Name="FK__NhanVienT__maNVT__31EC6D26" Association="Self.FK__NhanVienT__maNVT__31EC6D26">
-            <End Role="Nguoi" EntitySet="Nguois" />
-            <End Role="NhanVienThuKho" EntitySet="NhanVienThuKhoes" />
+            <End Role="Nguoi" EntitySet="Nguoi" />
+            <End Role="NhanVienThuKho" EntitySet="NhanVienThuKho" />
           </AssociationSet>
           <AssociationSet Name="FK__QuanLy__maQL__25869641" Association="Self.FK__QuanLy__maQL__25869641">
-            <End Role="Nguoi" EntitySet="Nguois" />
-            <End Role="QuanLy" EntitySet="QuanLies" />
+            <End Role="Nguoi" EntitySet="Nguoi" />
+            <End Role="QuanLy" EntitySet="QuanLy" />
           </AssociationSet>
           <AssociationSet Name="FK__NhanVienB__maNVB__37A5467C" Association="Self.FK__NhanVienB__maNVB__37A5467C">
-            <End Role="NhanVienBanHang" EntitySet="NhanVienBanHangs" />
-            <End Role="NhanVienBanHangCaLam" EntitySet="NhanVienBanHangCaLams" />
+            <End Role="NhanVienBanHang" EntitySet="NhanVienBanHang" />
+            <End Role="NhanVienBanHangCaLam" EntitySet="NhanVienBanHangCaLam" />
           </AssociationSet>
           <AssociationSet Name="FK__NhanVienT__maNVT__4E88ABD4" Association="Self.FK__NhanVienT__maNVT__4E88ABD4">
-            <End Role="NhanVienThuKho" EntitySet="NhanVienThuKhoes" />
-            <End Role="NhanVienThuKhoMatHang" EntitySet="NhanVienThuKhoMatHangs" />
+            <End Role="NhanVienThuKho" EntitySet="NhanVienThuKho" />
+            <End Role="NhanVienThuKhoMatHang" EntitySet="NhanVienThuKhoMatHang" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -974,7 +974,7 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ConvenienceStoreModelStoreContainer" CdmEntityContainer="ConvenienceStoreEntities">
-          <EntitySetMapping Name="CaLams">
+          <EntitySetMapping Name="CaLam">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.CaLam">
               <MappingFragment StoreEntitySet="CaLam">
                 <ScalarProperty Name="maCa" ColumnName="maCa" />
@@ -983,7 +983,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ChiNhanhs">
+          <EntitySetMapping Name="ChiNhanh">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.ChiNhanh">
               <MappingFragment StoreEntitySet="ChiNhanh">
                 <ScalarProperty Name="maCN" ColumnName="maCN" />
@@ -994,7 +994,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HoaDons">
+          <EntitySetMapping Name="HoaDon">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
                 <ScalarProperty Name="maHD" ColumnName="maHD" />
@@ -1006,7 +1006,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HoaDonSanPhams">
+          <EntitySetMapping Name="HoaDonSanPham">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.HoaDonSanPham">
               <MappingFragment StoreEntitySet="HoaDonSanPham">
                 <ScalarProperty Name="maHD" ColumnName="maHD" />
@@ -1015,14 +1015,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="KeToans">
+          <EntitySetMapping Name="KeToan">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.KeToan">
               <MappingFragment StoreEntitySet="KeToan">
                 <ScalarProperty Name="maKT" ColumnName="maKT" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="LoaiHangs">
+          <EntitySetMapping Name="LoaiHang">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.LoaiHang">
               <MappingFragment StoreEntitySet="LoaiHang">
                 <ScalarProperty Name="maLoai" ColumnName="maLoai" />
@@ -1030,7 +1030,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="MatHangs">
+          <EntitySetMapping Name="MatHang">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.MatHang">
               <MappingFragment StoreEntitySet="MatHang">
                 <ScalarProperty Name="maMH" ColumnName="maMH" />
@@ -1042,7 +1042,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="MatHangChiNhanhs">
+          <EntitySetMapping Name="MatHangChiNhanh">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.MatHangChiNhanh">
               <MappingFragment StoreEntitySet="MatHangChiNhanh">
                 <ScalarProperty Name="maMH" ColumnName="maMH" />
@@ -1051,7 +1051,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Nguois">
+          <EntitySetMapping Name="Nguoi">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.Nguoi">
               <MappingFragment StoreEntitySet="Nguoi">
                 <ScalarProperty Name="userID" ColumnName="userID" />
@@ -1066,7 +1066,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="NhaCungCaps">
+          <EntitySetMapping Name="NhaCungCap">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.NhaCungCap">
               <MappingFragment StoreEntitySet="NhaCungCap">
                 <ScalarProperty Name="maNCC" ColumnName="maNCC" />
@@ -1077,7 +1077,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="NhanVienBanHangs">
+          <EntitySetMapping Name="NhanVienBanHang">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.NhanVienBanHang">
               <MappingFragment StoreEntitySet="NhanVienBanHang">
                 <ScalarProperty Name="maNVBH" ColumnName="maNVBH" />
@@ -1088,7 +1088,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="NhanVienBanHangCaLams">
+          <EntitySetMapping Name="NhanVienBanHangCaLam">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.NhanVienBanHangCaLam">
               <MappingFragment StoreEntitySet="NhanVienBanHangCaLam">
                 <ScalarProperty Name="maNVBH" ColumnName="maNVBH" />
@@ -1097,14 +1097,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="NhanVienThuKhoes">
+          <EntitySetMapping Name="NhanVienThuKho">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.NhanVienThuKho">
               <MappingFragment StoreEntitySet="NhanVienThuKho">
                 <ScalarProperty Name="maNVTK" ColumnName="maNVTK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="NhanVienThuKhoMatHangs">
+          <EntitySetMapping Name="NhanVienThuKhoMatHang">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.NhanVienThuKhoMatHang">
               <MappingFragment StoreEntitySet="NhanVienThuKhoMatHang">
                 <ScalarProperty Name="maNVTK" ColumnName="maNVTK" />
@@ -1114,7 +1114,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="QuanLies">
+          <EntitySetMapping Name="QuanLy">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.QuanLy">
               <MappingFragment StoreEntitySet="QuanLy">
                 <ScalarProperty Name="maQL" ColumnName="maQL" />
@@ -1137,7 +1137,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

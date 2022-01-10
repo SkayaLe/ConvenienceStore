@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Services;
 
 namespace ConvenienceStore
 {
     public partial class Login : Form
     {
+        LoginService sv = new LoginService();
+        
         public Login()
         {
             InitializeComponent();
@@ -19,20 +22,12 @@ namespace ConvenienceStore
 
         public bool CheckTaiKhoan(string username, string passwd)
         {
-            try
-            {
-                var nguoi = Model.ModelEntity.db.Nguois.Single(x => x.userID == username && x.passwd == passwd);
-            }
-            catch (InvalidOperationException)
-            {
-                return false;
-            }
-            return true;
+            return sv.CheckTaiKhoan(username, passwd);
         }
 
         public bool CheckQuanLyChuoi(string username)
         {
-            return Model.ModelEntity.db.QuanLies.Single(x => x.maQL == username).isQLChuoi.Value;
+            return sv.CheckQuanLyChuoi(username);
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)

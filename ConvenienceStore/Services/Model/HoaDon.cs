@@ -7,27 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConvenienceStore.Model
+namespace Services.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class CaLam
+    public partial class HoaDon
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CaLam()
+        public HoaDon()
         {
-            this.HoaDons = new HashSet<HoaDon>();
-            this.NhanVienBanHangCaLams = new HashSet<NhanVienBanHangCaLam>();
+            this.HoaDonSanPham = new HashSet<HoaDonSanPham>();
         }
     
+        public string maHD { get; set; }
+        public string maNVBH { get; set; }
         public string maCa { get; set; }
-        public Nullable<System.TimeSpan> thoiGianBD { get; set; }
-        public Nullable<System.TimeSpan> thoiGianKT { get; set; }
+        public string maCN { get; set; }
+        public Nullable<System.DateTime> ngayLap { get; set; }
+        public Nullable<double> tongTien { get; set; }
     
+        public virtual CaLam CaLam { get; set; }
+        public virtual ChiNhanh ChiNhanh { get; set; }
+        public virtual NhanVienBanHang NhanVienBanHang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NhanVienBanHangCaLam> NhanVienBanHangCaLams { get; set; }
+        public virtual ICollection<HoaDonSanPham> HoaDonSanPham { get; set; }
     }
 }

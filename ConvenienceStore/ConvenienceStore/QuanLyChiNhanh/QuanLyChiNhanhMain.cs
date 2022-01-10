@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Services;
 
 namespace ConvenienceStore.QuanLyChiNhanh
 {
     public partial class QuanLyChiNhanhMain : Form
     {
         private string maQLChiNhanh;
-        private Model.QuanLy qlChiNhanh;
+
+        QuanLyChiNhanhMainService sv = new QuanLyChiNhanhMainService();
 
         private Form currentChildForm;
 
@@ -32,8 +34,7 @@ namespace ConvenienceStore.QuanLyChiNhanh
 
         private void QuanLyChiNhanhMain_Load(object sender, EventArgs e)
         {
-            qlChiNhanh = Model.ModelEntity.db.QuanLies.Single(x => x.maQL == maQLChiNhanh);
-            userLbl.Text = qlChiNhanh.Nguoi.hoTen;
+            userLbl.Text = sv.getName(maQLChiNhanh);
         }
 
         private void OpenChildForm(Form childForm)

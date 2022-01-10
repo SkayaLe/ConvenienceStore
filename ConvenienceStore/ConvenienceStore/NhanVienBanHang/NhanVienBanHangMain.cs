@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Services;
 
 namespace ConvenienceStore.NhanVienBanHang
 {
     public partial class NhanVienBanHangMain : Form
     {
         private string maNVBH;
-        private Model.NhanVienBanHang nvbh;
+
+        NhanVienBanHangMainService sv = new NhanVienBanHangMainService();
 
         private Form currentChildForm;
 
@@ -32,8 +34,7 @@ namespace ConvenienceStore.NhanVienBanHang
 
         private void NhanVienBanHangMain_Load(object sender, EventArgs e)
         {
-            nvbh = Model.ModelEntity.db.NhanVienBanHangs.Single(x => x.maNVBH == maNVBH);
-            userLbl.Text = nvbh.Nguoi.hoTen;
+            userLbl.Text = sv.getName(maNVBH);
         }
 
         private void OpenChildForm(Form childForm)

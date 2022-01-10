@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConvenienceStore.Model
+namespace Services.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class HoaDonSanPham
+    public partial class MatHangChiNhanh
     {
-        public string maHD { get; set; }
         public string maMH { get; set; }
+        public string maCN { get; set; }
         public Nullable<int> soLuong { get; set; }
     
-        public virtual HoaDon HoaDon { get; set; }
+        public virtual ChiNhanh ChiNhanh { get; set; }
         public virtual MatHang MatHang { get; set; }
     }
 }
