@@ -34,9 +34,9 @@ namespace ConvenienceStore.QuanLyChiNhanh
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.userLbl = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.timeLbl = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.btnXepCaLam = new System.Windows.Forms.Button();
             this.btnKiemTraHoaDon = new System.Windows.Forms.Button();
             this.pnlUseCase = new System.Windows.Forms.Panel();
@@ -70,7 +70,7 @@ namespace ConvenienceStore.QuanLyChiNhanh
             // 
             this.pnlTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlTitle.Controls.Add(this.timeLbl);
+            this.pnlTitle.Controls.Add(this.lblTime);
             this.pnlTitle.Controls.Add(this.btnLogout);
             this.pnlTitle.Location = new System.Drawing.Point(118, 0);
             this.pnlTitle.Name = "pnlTitle";
@@ -88,29 +88,29 @@ namespace ConvenienceStore.QuanLyChiNhanh
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
-            // userLbl
+            // lblUser
             // 
-            this.userLbl.Location = new System.Drawing.Point(1, 0);
-            this.userLbl.Name = "userLbl";
-            this.userLbl.Size = new System.Drawing.Size(117, 33);
-            this.userLbl.TabIndex = 1;
-            this.userLbl.Text = "User";
-            this.userLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUser.Location = new System.Drawing.Point(1, 0);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(117, 33);
+            this.lblUser.TabIndex = 1;
+            this.lblUser.Text = "User";
+            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // timeLbl
+            // lblTime
             // 
-            this.timeLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.timeLbl.Location = new System.Drawing.Point(251, 9);
-            this.timeLbl.Name = "timeLbl";
-            this.timeLbl.Size = new System.Drawing.Size(304, 23);
-            this.timeLbl.TabIndex = 1;
-            this.timeLbl.Text = "Time";
-            this.timeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTime.Location = new System.Drawing.Point(251, 9);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(304, 23);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "Time";
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnXepCaLam
             // 
@@ -147,7 +147,7 @@ namespace ConvenienceStore.QuanLyChiNhanh
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 473);
             this.Controls.Add(this.pnlUseCase);
-            this.Controls.Add(this.userLbl);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlSideBar);
             this.Name = "QuanLyChiNhanhMain";
@@ -166,9 +166,9 @@ namespace ConvenienceStore.QuanLyChiNhanh
         private System.Windows.Forms.Panel pnlSideBar;
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label userLbl;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.Label timeLbl;
+        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnKiemTraHoaDon;
         private System.Windows.Forms.Button btnXepCaLam;
         private System.Windows.Forms.Panel pnlUseCase;

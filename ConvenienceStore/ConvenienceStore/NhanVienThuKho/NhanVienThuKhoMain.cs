@@ -29,12 +29,12 @@ namespace ConvenienceStore.NhanVienThuKho
         private void Timer_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            timeLbl.Text = dt.ToString("dddd dd/MM/yyyy HH:mm:ss");
+            lblTime.Text = dt.ToString("dddd dd/MM/yyyy HH:mm:ss");
         }
 
         private void NhanVienThuKhoMain_Load(object sender, EventArgs e)
         {
-            userLbl.Text = sv.getName(maNVTK);
+            lblUser.Text = sv.getName(maNVTK);
         }
 
         private void OpenChildForm(Form childForm)

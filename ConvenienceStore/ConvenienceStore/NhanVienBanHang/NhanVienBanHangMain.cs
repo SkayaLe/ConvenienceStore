@@ -13,9 +13,9 @@ namespace ConvenienceStore.NhanVienBanHang
 {
     public partial class NhanVienBanHangMain : Form
     {
-        private string maNVBH;
+        internal string maNVBH;
 
-        NhanVienBanHangMainService sv = new NhanVienBanHangMainService();
+        private NhanVienBanHangMainService sv = new NhanVienBanHangMainService();
 
         private Form currentChildForm;
 
@@ -29,26 +29,27 @@ namespace ConvenienceStore.NhanVienBanHang
         private void Timer_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            timeLbl.Text = dt.ToString("dddd dd/MM/yyyy HH:mm:ss");
+            lblTime.Text = dt.ToString("dddd dd/MM/yyyy HH:mm:ss");
         }
 
         private void NhanVienBanHangMain_Load(object sender, EventArgs e)
         {
-            userLbl.Text = sv.getName(maNVBH);
+            lblUser.Text = sv.getName(maNVBH);
         }
 
         private void OpenChildForm(Form childForm)
         {
             if(currentChildForm != null)
             {
-                currentChildForm.Dispose();
+                currentChildForm.Close();
             }
             currentChildForm = childForm;
+            childForm.MdiParent = this;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
             pnlUseCase.Controls.Add(childForm);
-            //pnlUseCase.Tag = childForm;
+            pnlUseCase.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -66,7 +67,7 @@ namespace ConvenienceStore.NhanVienBanHang
 
         private void BtnBanHang_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new BanHang());
+            OpenChildForm(new BanHang(this));
         }
 
         private void BtnXemHoaDon_Click(object sender, EventArgs e)

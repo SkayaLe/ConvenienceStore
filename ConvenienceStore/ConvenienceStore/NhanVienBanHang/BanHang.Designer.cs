@@ -49,6 +49,7 @@ namespace ConvenienceStore.NhanVienBanHang
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSP)).BeginInit();
             this.SuspendLayout();
             // 
@@ -240,12 +241,23 @@ namespace ConvenienceStore.NhanVienBanHang
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
             // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(673, 404);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(100, 23);
+            this.btnHuy.TabIndex = 9;
+            this.btnHuy.Text = "Hủy Hóa Đơn";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.BtnHuy_Click);
+            // 
             // BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
@@ -268,6 +280,7 @@ namespace ConvenienceStore.NhanVienBanHang
             this.Controls.Add(this.dataGridSP);
             this.Name = "BanHang";
             this.Text = "BanHang";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BanHang_FormClosing);
             this.Load += new System.EventHandler(this.BanHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSP)).EndInit();
             this.ResumeLayout(false);
@@ -297,5 +310,6 @@ namespace ConvenienceStore.NhanVienBanHang
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

@@ -32,13 +32,13 @@ namespace ConvenienceStore.NhanVienBanHang
             this.components = new System.ComponentModel.Container();
             this.btnBanHang = new System.Windows.Forms.Button();
             this.pnlSideBar = new System.Windows.Forms.Panel();
-            this.pnlTitle = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.userLbl = new System.Windows.Forms.Label();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.timeLbl = new System.Windows.Forms.Label();
-            this.btnXemHoaDon = new System.Windows.Forms.Button();
             this.btnTongKetCa = new System.Windows.Forms.Button();
+            this.btnXemHoaDon = new System.Windows.Forms.Button();
+            this.pnlTitle = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.pnlUseCase = new System.Windows.Forms.Panel();
             this.pnlSideBar.SuspendLayout();
             this.pnlTitle.SuspendLayout();
@@ -66,16 +66,47 @@ namespace ConvenienceStore.NhanVienBanHang
             this.pnlSideBar.Size = new System.Drawing.Size(117, 437);
             this.pnlSideBar.TabIndex = 1;
             // 
+            // btnTongKetCa
+            // 
+            this.btnTongKetCa.Location = new System.Drawing.Point(-1, 70);
+            this.btnTongKetCa.Name = "btnTongKetCa";
+            this.btnTongKetCa.Size = new System.Drawing.Size(117, 29);
+            this.btnTongKetCa.TabIndex = 0;
+            this.btnTongKetCa.Text = "Tổng Kết Ca";
+            this.btnTongKetCa.UseVisualStyleBackColor = true;
+            this.btnTongKetCa.Click += new System.EventHandler(this.BtnTongKetCa_Click);
+            // 
+            // btnXemHoaDon
+            // 
+            this.btnXemHoaDon.Location = new System.Drawing.Point(-1, 35);
+            this.btnXemHoaDon.Name = "btnXemHoaDon";
+            this.btnXemHoaDon.Size = new System.Drawing.Size(117, 29);
+            this.btnXemHoaDon.TabIndex = 0;
+            this.btnXemHoaDon.Text = "Xem Hóa Đơn";
+            this.btnXemHoaDon.UseVisualStyleBackColor = true;
+            this.btnXemHoaDon.Click += new System.EventHandler(this.BtnXemHoaDon_Click);
+            // 
             // pnlTitle
             // 
             this.pnlTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlTitle.Controls.Add(this.timeLbl);
+            this.pnlTitle.Controls.Add(this.lblTime);
             this.pnlTitle.Controls.Add(this.btnLogout);
             this.pnlTitle.Location = new System.Drawing.Point(118, 0);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(799, 38);
             this.pnlTitle.TabIndex = 2;
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTime.Location = new System.Drawing.Point(251, 9);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(304, 23);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "Time";
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogout
             // 
@@ -88,49 +119,18 @@ namespace ConvenienceStore.NhanVienBanHang
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
-            // userLbl
+            // lblUser
             // 
-            this.userLbl.Location = new System.Drawing.Point(1, 0);
-            this.userLbl.Name = "userLbl";
-            this.userLbl.Size = new System.Drawing.Size(117, 33);
-            this.userLbl.TabIndex = 1;
-            this.userLbl.Text = "User";
-            this.userLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUser.Location = new System.Drawing.Point(1, 0);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(117, 33);
+            this.lblUser.TabIndex = 1;
+            this.lblUser.Text = "User";
+            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
-            // 
-            // timeLbl
-            // 
-            this.timeLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.timeLbl.Location = new System.Drawing.Point(251, 9);
-            this.timeLbl.Name = "timeLbl";
-            this.timeLbl.Size = new System.Drawing.Size(304, 23);
-            this.timeLbl.TabIndex = 1;
-            this.timeLbl.Text = "Time";
-            this.timeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnXemHoaDon
-            // 
-            this.btnXemHoaDon.Location = new System.Drawing.Point(-1, 35);
-            this.btnXemHoaDon.Name = "btnXemHoaDon";
-            this.btnXemHoaDon.Size = new System.Drawing.Size(117, 29);
-            this.btnXemHoaDon.TabIndex = 0;
-            this.btnXemHoaDon.Text = "Xem Hóa Đơn";
-            this.btnXemHoaDon.UseVisualStyleBackColor = true;
-            this.btnXemHoaDon.Click += new System.EventHandler(this.BtnXemHoaDon_Click);
-            // 
-            // btnTongKetCa
-            // 
-            this.btnTongKetCa.Location = new System.Drawing.Point(-1, 70);
-            this.btnTongKetCa.Name = "btnTongKetCa";
-            this.btnTongKetCa.Size = new System.Drawing.Size(117, 29);
-            this.btnTongKetCa.TabIndex = 0;
-            this.btnTongKetCa.Text = "Tổng Kết Ca";
-            this.btnTongKetCa.UseVisualStyleBackColor = true;
-            this.btnTongKetCa.Click += new System.EventHandler(this.BtnTongKetCa_Click);
             // 
             // pnlUseCase
             // 
@@ -147,9 +147,10 @@ namespace ConvenienceStore.NhanVienBanHang
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 473);
             this.Controls.Add(this.pnlUseCase);
-            this.Controls.Add(this.userLbl);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlSideBar);
+            this.IsMdiContainer = true;
             this.Name = "NhanVienBanHangMain";
             this.Text = "NhanVienBanHangMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NhanVienBanHangMain_FormClosed);
@@ -166,9 +167,9 @@ namespace ConvenienceStore.NhanVienBanHang
         private System.Windows.Forms.Panel pnlSideBar;
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label userLbl;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.Label timeLbl;
+        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnTongKetCa;
         private System.Windows.Forms.Button btnXemHoaDon;
         private System.Windows.Forms.Panel pnlUseCase;

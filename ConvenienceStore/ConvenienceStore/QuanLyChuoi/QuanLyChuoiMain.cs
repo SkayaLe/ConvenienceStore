@@ -29,12 +29,12 @@ namespace ConvenienceStore.QuanLyChuoi
         private void Timer_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            timeLbl.Text = dt.ToString("dddd dd/MM/yyyy HH:mm:ss");
+            lblTime.Text = dt.ToString("dddd dd/MM/yyyy HH:mm:ss");
         }
 
         private void QuanLyChuoiMain_Load(object sender, EventArgs e)
         {
-            userLbl.Text = sv.getName(maQLChuoi);
+            lblUser.Text = sv.getName(maQLChuoi);
         }
 
         private void OpenChildForm(Form childForm)

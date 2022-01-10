@@ -29,12 +29,12 @@ namespace ConvenienceStore.QuanLyChiNhanh
         private void Timer_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            timeLbl.Text = dt.ToString("dddd dd/MM/yyyy HH:mm:ss");
+            lblTime.Text = dt.ToString("dddd dd/MM/yyyy HH:mm:ss");
         }
 
         private void QuanLyChiNhanhMain_Load(object sender, EventArgs e)
         {
-            userLbl.Text = sv.getName(maQLChiNhanh);
+            lblUser.Text = sv.getName(maQLChiNhanh);
         }
 
         private void OpenChildForm(Form childForm)
