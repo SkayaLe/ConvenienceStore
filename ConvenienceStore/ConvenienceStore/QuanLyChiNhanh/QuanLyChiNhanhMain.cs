@@ -14,7 +14,7 @@ namespace ConvenienceStore.QuanLyChiNhanh
     public partial class QuanLyChiNhanhMain : Form
     {
         // Biến mã QLChiNhanh để truyền cho service
-        private string maQLChiNhanh;
+        internal string maQLChiNhanh;
 
         // Khởi tạo service xử lý
         QuanLyChiNhanhMainService sv = new QuanLyChiNhanhMainService();
@@ -56,7 +56,7 @@ namespace ConvenienceStore.QuanLyChiNhanh
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
             pnlUseCase.Controls.Add(childForm);
-            //pnlUseCase.Tag = childForm;
+            pnlUseCase.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -76,7 +76,7 @@ namespace ConvenienceStore.QuanLyChiNhanh
 
         private void BtnQuanLyNhanVien_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new QuanLyNhanVien());
+            OpenChildForm(new QuanLyNhanVien(this));
         }
 
         private void BtnXepCaLam_Click(object sender, EventArgs e)
